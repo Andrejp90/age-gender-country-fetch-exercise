@@ -1,5 +1,9 @@
 <div>
   <label for="name">{{ labelValue }}</label>
   <input type="text" name="name" [(ngModel)]="name" />
-  <button>Submit</button>
+  <button (click)="onButtonClick()">Submit</button>
+</div>
+
+<div *ngIf = 'gender'>
+  <p>Gender: {{ gender.gender }}</p>
 </div>
