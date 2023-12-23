@@ -4,6 +4,7 @@
   <button (click)="onButtonClick()">Submit</button>
 </div>
 
-<div *ngIf = 'gender'>
+<div *ngIf = 'gender && age'>
   <p>Gender: {{ gender.gender }}</p>
+  <p>Gender: {{ age.age }}</p>
 </div>
