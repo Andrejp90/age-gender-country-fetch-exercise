@@ -4,7 +4,15 @@
   <button (click)="onButtonClick()">Submit</button>
 </div>
 
-<div *ngIf = 'gender && age'>
+<div *ngIf="gender && age && country">
+  <h3>Results for "{{name}}"</h3>
   <p>Gender: {{ gender.gender }}</p>
-  <p>Gender: {{ age.age }}</p>
+  <p>Age: {{ age.age }}</p>
+  <p>Country:</p>
+  <ul>
+    <li *ngFor="let country of country.country | slice:0:3">
+      Country ID: {{ country.country_id }} - Probability:
+      {{ country.probability | probabilityPercentage }}
+    </li>
+  </ul>
 </div>
