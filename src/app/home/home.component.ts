@@ -31,7 +31,6 @@ export class HomeComponent {
 
     this.nameInfoService.getCountryByName(this.name).subscribe(country=>{
       this.country = country;
-      //this.country.country = country.country.slice(0, 3);
     });
       }
   
