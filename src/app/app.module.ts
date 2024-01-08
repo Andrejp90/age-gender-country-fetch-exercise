@@ -7,13 +7,15 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProbabilityPercentagePipe } from './pipe/probability-percentage.pipe';
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
   declarations: [
     AppComponent, 
     HomeComponent, 
-    ProbabilityPercentagePipe
+    ProbabilityPercentagePipe, 
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

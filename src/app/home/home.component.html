@@ -3,7 +3,9 @@
   <input type="text" name="name" [(ngModel)]="name" />
   <button (click)="onButtonClick()">Submit</button>
 </div>
-
+<div *ngIf="isLoading">
+  <app-loader></app-loader>
+</div>
 <div *ngIf="gender && age && country">
   <h3>Results for "{{name}}"</h3>
   <p>Gender: {{ gender.gender }}</p>

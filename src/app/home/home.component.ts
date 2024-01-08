@@ -19,10 +19,15 @@ export class HomeComponent {
   gender: Gender | null = null ;
   age: Age | null = null ;
   country: CountryFinal | null = null;
+  isLoading: boolean = false;
 
   constructor(private nameInfoService: NameInfoService) {}
 
   onButtonClick() {
+    this.isLoading = true;
+
+    setTimeout(() => {
+
     this.nameInfoService.getGenderByName(this.name).subscribe(gender=>{
       this.gender= gender});
 
@@ -31,10 +36,12 @@ export class HomeComponent {
 
     this.nameInfoService.getCountryByName(this.name).subscribe(country=>{
       this.country = country;
+
+      this.isLoading = false;
     });
-      }
-  
-  }
+  }, 3000);
+}
+}
     
 
 
